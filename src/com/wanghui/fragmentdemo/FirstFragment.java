@@ -8,95 +8,100 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class FirstFragment extends Fragment {
 
-	static FirstFragment newInstance() {
-		FirstFragment fragment = new FirstFragment();
-		return fragment;
-	}
-	
-	public void goToSecond(View v){
-		//TODO 切换到第二个
-	}
+	private MainActivity mActivity;
+	private Button mButton;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		Log.d("FirstFragment", "onCreateView");
-		return inflater.inflate(R.layout.first_fragment, container, false);
+		Log.e("FirstFragment", "onCreateView");
+		View view = inflater.inflate(R.layout.first_fragment, container, false);
+//		mButton = (Button) view.findViewById(R.id.btn_1);
+//		mButton.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				System.out.println("跳到第二个");
+//				mActivity.switchFragment();
+//			}
+//		});
+		return view;
 	}
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		Log.d("FirstFragment", "onActivityCreated");
+		Log.e("FirstFragment", "onActivityCreated");
 	}
 
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		Log.d("FirstFragment", "onActivityResult");
+		Log.e("FirstFragment", "onActivityResult");
 	}
 
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		Log.d("FirstFragment", "onAttach");
+		mActivity = (MainActivity) activity;
+		Log.e("FirstFragment", "onAttach");
 	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.d("FirstFragment", "onCreate");
+		Log.e("FirstFragment", "onCreate");
 	}
 
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		Log.d("FirstFragment", "onDestroy");
+		Log.e("FirstFragment", "onDestroy");
 	}
 
 	@Override
 	public void onDestroyView() {
 		super.onDestroyView();
-		Log.d("FirstFragment", "onDestroyView");
+		Log.e("FirstFragment", "onDestroyView");
 	}
 
 	@Override
 	public void onDetach() {
 		super.onDetach();
-		Log.d("FirstFragment", "onDetach");
+		Log.e("FirstFragment", "onDetach");
 	}
 
 	@Override
 	public void onPause() {
 		super.onPause();
-		Log.d("FirstFragment", "onPause");
+		Log.e("FirstFragment", "onPause");
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
-		Log.d("FirstFragment", "onResume");
+		Log.e("FirstFragment", "onResume");
 	}
 
 	@Override
 	public void onStart() {
 		super.onStart();
-		Log.d("FirstFragment", "onStart");
+		Log.e("FirstFragment", "onStart");
 	}
 
 	@Override
 	public void onStop() {
 		super.onStop();
-		Log.d("FirstFragment", "onStop");
+		Log.e("FirstFragment", "onStop");
 	}
 
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
-		Log.d("FirstFragment", "onViewCreated");
+		Log.e("FirstFragment", "onViewCreated");
 	}
 
 }

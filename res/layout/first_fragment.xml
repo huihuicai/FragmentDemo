@@ -10,7 +10,6 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         android:background="@android:color/holo_green_light"
-        android:onClick="goToSecond"
         android:text="第一个fragment"
         android:textSize="30sp" />
 

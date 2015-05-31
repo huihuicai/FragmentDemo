@@ -19,80 +19,80 @@ public class SecondFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		Log.d("SecondFragment", "onCreateView");
-		return inflater.inflate(R.layout.first_fragment, container, false);
+		Log.e("SecondFragment", "onCreateView");
+		return inflater.inflate(R.layout.second_fragment, container, false);
 	}
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		Log.d("SecondFragment", "onActivityCreated");
+		Log.e("SecondFragment", "onActivityCreated");
 	}
 
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		Log.d("SecondFragment", "onActivityResult");
+		Log.e("SecondFragment", "onActivityResult");
 	}
 
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		Log.d("SecondFragment", "onAttach");
+		Log.e("SecondFragment", "onAttach");
 	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.d("SecondFragment", "onCreate");
+		Log.e("SecondFragment", "onCreate");
 	}
 
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		Log.d("SecondFragment", "onDestroy");
+		Log.e("SecondFragment", "onDestroy");
 	}
 
 	@Override
 	public void onDestroyView() {
 		super.onDestroyView();
-		Log.d("SecondFragment", "onDestroyView");
+		Log.e("SecondFragment", "onDestroyView");
 	}
 
 	@Override
 	public void onDetach() {
 		super.onDetach();
-		Log.d("SecondFragment", "onDetach");
+		Log.e("SecondFragment", "onDetach");
 	}
 
 	@Override
 	public void onPause() {
 		super.onPause();
-		Log.d("SecondFragment", "onPause");
+		Log.e("SecondFragment", "onPause");
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
-		Log.d("SecondFragment", "onResume");
+		Log.e("SecondFragment", "onResume");
 	}
 
 	@Override
 	public void onStart() {
 		super.onStart();
-		Log.d("SecondFragment", "onStart");
+		Log.e("SecondFragment", "onStart");
 	}
 
 	@Override
 	public void onStop() {
 		super.onStop();
-		Log.d("SecondFragment", "onStop");
+		Log.e("SecondFragment", "onStop");
 	}
 
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
-		Log.d("SecondFragment", "onViewCreated");
+		Log.e("SecondFragment", "onViewCreated");
 	}
 
 }
