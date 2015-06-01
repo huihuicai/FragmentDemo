@@ -28,6 +28,7 @@ public class FirstFragment extends Fragment {
 //				mActivity.switchFragment();
 //			}
 //		});
+		
 		return view;
 	}
 

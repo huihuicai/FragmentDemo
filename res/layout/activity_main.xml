@@ -3,11 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <Button android:id="@+id/swtich"
+    <Button
+        android:id="@+id/swtich"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="切换fragment"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="切换fragment" />
+
+    <!--
     <fragment
         android:id="@+id/first"
         android:layout_below="@+id/swtich"
@@ -21,10 +24,12 @@
         android:name="com.wanghui.fragmentdemo.SecondFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    -->
 
-    <!-- <FrameLayout
+    <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" /> -->
+        android:layout_height="match_parent"
+        android:layout_below="@+id/swtich" />
 
 </RelativeLayout>
