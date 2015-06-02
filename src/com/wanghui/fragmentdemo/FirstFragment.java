@@ -8,28 +8,29 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 public class FirstFragment extends Fragment {
 
 	private MainActivity mActivity;
-	private Button mButton;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		Log.e("FirstFragment", "onCreateView");
 		View view = inflater.inflate(R.layout.first_fragment, container, false);
-//		mButton = (Button) view.findViewById(R.id.btn_1);
-//		mButton.setOnClickListener(new OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				System.out.println("跳到第二个");
-//				mActivity.switchFragment();
-//			}
-//		});
-		
 		return view;
+	}
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		System.out.println("保存之前的参数");
+	}
+	
+	@Override
+	public void onViewStateRestored(Bundle savedInstanceState) {
+		super.onViewStateRestored(savedInstanceState);
+		System.out.println("现在是把view的状态restore");
 	}
 
 	@Override

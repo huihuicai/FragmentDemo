@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.FragmentManager.OnBackStackChangedListener;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
@@ -29,9 +30,28 @@ public class MainActivity extends Activity {
 			}
 		});
         
+        findViewById(R.id.clear).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				
+				//回退栈的监听，做一些回退的操作
+				mFragmentManager
+						.addOnBackStackChangedListener(new OnBackStackChangedListener() {
+							@Override
+							public void onBackStackChanged() {
+								for (int i = 0; i < mFragmentManager
+										.getBackStackEntryCount(); ++i) {
+									mFragmentManager.popBackStack();
+								}
+							}
+						});
+			}
+		});
+        
 //        getAllFragment();
 //        addFragment();
         replaceFragment();
+        
     }
     /**
      * 布局加载fragment的时候，获取全部的fragment
@@ -133,6 +153,18 @@ public class MainActivity extends Activity {
     
     private void goOtherActivity(){
     	//TODO 跳转到其他的activity中去
+    	OnBackStackChangedListener listener = new OnBackStackChangedListener() {
+			@Override
+			public void onBackStackChanged() {
+				//做一些回退的时候的事情
+			}
+		};
+		
+		FragmentManager fm = getFragmentManager();
+		for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {    
+		    fm.popBackStack();
+		}
+		fm.popBackStack("", FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 
 }

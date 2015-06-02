@@ -5,10 +5,18 @@
 
     <Button
         android:id="@+id/swtich"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="切换fragment" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/swtich"
+        android:gravity="center"
+        android:text="清除BackStack" />
 
     <!--
     <fragment
@@ -23,8 +31,7 @@
         android:layout_below="@+id/swtich"
         android:name="com.wanghui.fragmentdemo.SecondFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    -->
+        android:layout_height="match_parent" />-->
 
     <FrameLayout
         android:id="@+id/container"

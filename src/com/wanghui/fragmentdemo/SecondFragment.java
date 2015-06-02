@@ -24,6 +24,18 @@ public class SecondFragment extends Fragment {
 	}
 
 	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		System.out.println("执行了onSaveInstanceState");
+	}
+	
+	@Override
+	public void onViewStateRestored(Bundle savedInstanceState) {
+		super.onViewStateRestored(savedInstanceState);
+		System.out.println("现在view又被restore了");
+	}
+
+	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		Log.e("SecondFragment", "onActivityCreated");
